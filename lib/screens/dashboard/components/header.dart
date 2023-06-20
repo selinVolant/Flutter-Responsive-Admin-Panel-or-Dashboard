@@ -25,8 +25,7 @@ class Header extends StatelessWidget {
             "Dashboard",
             style: Theme.of(context).textTheme.titleLarge,
           ),
-        if (!Responsive.isMobile(context))
-          Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
+        if (!Responsive.isMobile(context)) Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
         Expanded(child: SearchField()),
         ProfileCard()
       ],
@@ -60,9 +59,8 @@ class ProfileCard extends StatelessWidget {
           ),
           if (!Responsive.isMobile(context))
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-              child: Text("Angelina Jolie"),
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+              child: Text("Admin"),
             ),
           Icon(Icons.keyboard_arrow_down),
         ],
@@ -80,7 +78,7 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        hintText: "Search",
+        hintText: "Ara",
         fillColor: secondaryColor,
         filled: true,
         border: OutlineInputBorder(

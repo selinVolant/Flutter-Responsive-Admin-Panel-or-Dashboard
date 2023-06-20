@@ -35,11 +35,11 @@ class FileInfoCard extends StatelessWidget {
                   color: info.color!.withOpacity(0.1),
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
-                child: SvgPicture.asset(
-                  info.svgSrc!,
-                  colorFilter: ColorFilter.mode(
-                      info.color ?? Colors.black, BlendMode.srcIn),
-                ),
+                // child: SvgPicture.asset(
+                //   info.svgSrc!,
+                //   colorFilter: ColorFilter.mode(
+                //       info.color ?? Colors.black, BlendMode.srcIn),
+                // ),
               ),
               Icon(Icons.more_vert, color: Colors.white54)
             ],
@@ -57,18 +57,12 @@ class FileInfoCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "${info.numOfFiles} Files",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .copyWith(color: Colors.white70),
+                "${info.numOfFiles} Varış Noktası",
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70),
               ),
               Text(
                 info.totalStorage!,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .copyWith(color: Colors.white),
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),
               ),
             ],
           )
